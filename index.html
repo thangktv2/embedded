@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="Global.css">
+        <script src="./library/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Logo bar Area-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                    <img src="./icons/logo.png">
+            </div>
+        </nav>
+
+        <!-- Main Area-->
+        <div class="container">
+            <!--Header-->
+            <div class="header">
+                <div class="row">
+                    <div class="col col-md-3">
+                        <div class="user-name">
+                            <h2>Dash<strong>board</strong></h2>
+                        </div>
+                    </div>
+                    <div class="col offset-xs-4  offset-md-6">
+                        <div class="go-to-control">
+                            <a href="Control.html"><button class="btn btn-secondary btn-block">go to control</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Present Value-->
+            <div class="row">
+                <!--1st card-->
+                <div class="col">
+                    <div class="value-card card-1">
+                        <img src="./icons/fan_icon.svg" class="value-icon" alt="fan_icon">
+                        <p>Fan</p>
+                        <h3 id="state1"></h3>
+                    </div>
+                </div>
+                <!--2nd card-->
+                <div class="col">
+                    <div class="value-card card-2">
+                        <img src="./icons/lightbulb_icon.svg" class="value-icon" alt="fan_icon">
+                        <p>Light</p>
+                        <h3 id="state2"></h3>
+                    </div>
+                </div>
+                <!--3rd card-->
+                <div class="col">
+                    <div class="value-card card-3">
+                        <img src="./icons/air_conditioner_icon.svg" class="value-icon" alt="fan_icon">
+                        <p>Air Conditioner</p>
+                        <h3 id="state3"></h3>
+                    </div>
+                </div>
+                <!--4th card-->
+                <div class="col">
+                    <div class="value-card card-4">
+                        <img src="./icons/thermometer_icon.svg" class="value-icon" alt="fan_icon">
+                        <p>Temperature</p>
+                        <h3 id="state4"></h3>
+                    </div>
+                </div>
+                <!--5th card-->
+                <div class="col">
+                    <div class="value-card card-5">
+                        <img src="./icons/humidity_icon.svg" class="value-icon" alt="fan_icon">
+                        <p>Humidity</p>
+                        <h3 id="state5"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--Table Area-->
+            <div class="graph">
+                <div class="row">
+                    <div class="col">
+                        <div class="temperature">
+                            <div class="table1-name">
+                                <h5>Temperature Value</h5>
+                            </div>
+                            <div class="table1-info">
+                                <table class="table table-borderless table-striped">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col"> <strong>#</strong></th>
+                                        <th scope="col"> <strong>Value</strong> </th>
+                                        <th scope="col"> <strong>Time</strong> </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th id="stt1" scope="row"></th>
+                                        <td id="temp1"></td>
+                                        <td id="time1"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt2" scope="row"></th>
+                                        <td id="temp2"></td>
+                                        <td id="time2"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt3" scope="row"></th>
+                                        <td id="temp3"></td>
+                                        <td id="time3"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt4" scope="row"></th>
+                                        <td id="temp4"></td>
+                                        <td id="time4"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt5" scope="row"></th>
+                                        <td id="temp5"></td>
+                                        <td id="time5"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt6" scope="row"></th>
+                                        <td id="temp6"></td>
+                                        <td id="time6"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="humidity">
+                            <div class="table2-name">
+                                <h5>Humidity Value</h5>
+                            </div>
+                            <div class="table2-info">
+                                <table class="table table-borderless table-striped">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col"> <strong>#</strong></th>
+                                        <th scope="col"> <strong>Value</strong> </th>
+                                        <th scope="col"> <strong>Time</strong> </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th id="stt21" scope="row"></th>
+                                        <td id="humid1"></td>
+                                        <td id="time21"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt22" scope="row"></th>
+                                        <td id="humid2"></td>
+                                        <td id="time22"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt23" scope="row"></th>
+                                        <td id="humid3"></td>
+                                        <td id="time23"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt24" scope="row"></th>
+                                        <td id="humid4"></td>
+                                        <td id="time24"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt25" scope="row"></th>
+                                        <td id="humid5"></td>
+                                        <td id="time25"></td>
+                                        </tr>
+                                        <tr>
+                                        <th id="stt26" scope="row"></th>
+                                        <td id="humid6"></td>
+                                        <td id="time26"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+            //code xu ly form
+            $(document).on('submit','#control',function(){
+                $.post("addData.php",$('#control').serialize());
+                return false;
+            });
+            // code update table
+            updateTable();
+            });
+            setInterval(updateTable,1000);
+            function updateTable(){
+                // yeu cau server goi file getData.php
+                $.post("getData.php",
+                function(data){
+                    var state1 = data["control"][0].fan_state;
+                    var state2 = data["control"][0].light_state;
+                    var state3 = data["control"][0].air_state;
+                    var state4 = data["monitor"][0].temp + "°C";
+                    var state5 = data["monitor"][0].humid  + "%";
+
+                    var stt1 = data["monitor"][5].stt;
+                    var stt2 = data["monitor"][4].stt;
+                    var stt3 = data["monitor"][3].stt;
+                    var stt4 = data["monitor"][2].stt;
+                    var stt5 = data["monitor"][1].stt;
+                    var stt6 = data["monitor"][0].stt;
+
+                    var time1 = data["monitor"][5].time;
+                    var time2 = data["monitor"][4].time;
+                    var time3 = data["monitor"][3].time;
+                    var time4 = data["monitor"][2].time;
+                    var time5 = data["monitor"][1].time;
+                    var time6 = data["monitor"][0].time;
+
+                    var temp1 = data["monitor"][5].temp + "°C";
+                    var temp2 = data["monitor"][4].temp + "°C";
+                    var temp3 = data["monitor"][3].temp + "°C";
+                    var temp4 = data["monitor"][2].temp + "°C";
+                    var temp5 = data["monitor"][1].temp + "°C";
+                    var temp6 = data["monitor"][0].temp + "°C";
+
+                    var humid1 = data["monitor"][5].humid + "%";
+                    var humid2 = data["monitor"][4].humid + "%";
+                    var humid3 = data["monitor"][3].humid + "%";
+                    var humid4 = data["monitor"][2].humid + "%";
+                    var humid5 = data["monitor"][1].humid + "%";
+                    var humid6 = data["monitor"][0].humid + "%";
+
+                    document.getElementById("state1").innerHTML = state1;
+                    document.getElementById("state2").innerHTML = state2;
+                    document.getElementById("state3").innerHTML = state3;
+                    document.getElementById("state4").innerHTML = state4;
+                    document.getElementById("state5").innerHTML = state5;
+
+                    document.getElementById("stt1").innerHTML = stt1;
+                    document.getElementById("stt2").innerHTML = stt2;
+                    document.getElementById("stt3").innerHTML = stt3;
+                    document.getElementById("stt4").innerHTML = stt4;
+                    document.getElementById("stt5").innerHTML = stt5;
+                    document.getElementById("stt6").innerHTML = stt6;
+
+                    document.getElementById("stt21").innerHTML = stt1;
+                    document.getElementById("stt22").innerHTML = stt2;
+                    document.getElementById("stt23").innerHTML = stt3;
+                    document.getElementById("stt24").innerHTML = stt4;
+                    document.getElementById("stt25").innerHTML = stt5;
+                    document.getElementById("stt26").innerHTML = stt6;
+
+                    document.getElementById("time1").innerHTML = time1;
+                    document.getElementById("time2").innerHTML = time2;
+                    document.getElementById("time3").innerHTML = time3;
+                    document.getElementById("time4").innerHTML = time4;
+                    document.getElementById("time5").innerHTML = time5;
+                    document.getElementById("time6").innerHTML = time6;
+
+                    document.getElementById("time21").innerHTML = time1;
+                    document.getElementById("time22").innerHTML = time2;
+                    document.getElementById("time23").innerHTML = time3;
+                    document.getElementById("time24").innerHTML = time4;
+                    document.getElementById("time25").innerHTML = time5;
+                    document.getElementById("time26").innerHTML = time6;
+
+                    document.getElementById("temp1").innerHTML = temp1;
+                    document.getElementById("temp2").innerHTML = temp2;
+                    document.getElementById("temp3").innerHTML = temp3;
+                    document.getElementById("temp4").innerHTML = temp4;
+                    document.getElementById("temp5").innerHTML = temp5;
+                    document.getElementById("temp6").innerHTML = temp6;
+
+                    document.getElementById("humid1").innerHTML = humid1;
+                    document.getElementById("humid2").innerHTML = humid2;
+                    document.getElementById("humid3").innerHTML = humid3;
+                    document.getElementById("humid4").innerHTML = humid4;
+                    document.getElementById("humid5").innerHTML = humid5;
+                    document.getElementById("humid6").innerHTML = humid6;
+                })
+            }
+        </script>
+
+    </body>
+</html>
